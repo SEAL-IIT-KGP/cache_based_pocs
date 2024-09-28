@@ -23,6 +23,6 @@ Strategy:
 
 The following run has been performed on `12th Gen Intel(R) Core(TM) i5-12500 (microcode: 0x35)`
 
-A reasonable threshold for this system could be aroun `500` rdtsc cycles.
+A reasonable threshold for this system could be around `500` rdtsc cycles.
 
 ![Sample run](./sample_histplot.png)
