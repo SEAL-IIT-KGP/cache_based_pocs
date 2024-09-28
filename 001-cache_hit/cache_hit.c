@@ -2,11 +2,13 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-#define ARRAY_SIZE 1000
+#define ARRAY_SIZE 100
 
 static inline uint64_t rdtsc() {
+    __asm__ __volatile__("mfence");
     unsigned int lo, hi;
     __asm__ __volatile__ ("rdtsc" : "=a"(lo), "=d"(hi));
+    __asm__ __volatile__("mfence");
     return ((uint64_t)hi << 32) | lo;
 }
 
